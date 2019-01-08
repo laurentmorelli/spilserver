@@ -46,8 +46,8 @@ RUN apt-key adv --no-tty --keyserver keyserver.ubuntu.com --recv 2930ADAE8CAF505
 #============
 # SUPERVISOR
 #============
-#RUN apt-get update && apt-get install -y supervisor \
-#	&& rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y supervisor \
+	&& rm -rf /var/lib/apt/lists/*
 
 # Custom Supervisord config
 COPY ./docker/conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
